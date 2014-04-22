@@ -1,12 +1,14 @@
 import unittest
-from bowling import Game
-import unittest
+from bowling import roll_ball, score
 
 class PythonBowlingGame(unittest.TestCase):
+    def setUp(self):
+        self.frame = []
 
     def test_gutter_game(self):
-        self.roll_many(20, 0)
-        self.assertEqual(0, self.game.score()[0])
+        for i in range(20):
+            self.frame = roll_ball(self.frame, 0)
+        self.assertEqual(0, score(self.frame))
 
 
 if __name__ == '__main__':
