@@ -24,5 +24,13 @@ class PythonBowlingGame(unittest.TestCase):
             roll_ball(self.frame, 0)
         self.assertEqual(16, score(self.frame))
 
+    def test_one_strike(self):
+        roll_ball(self.frame, 10)
+        roll_ball(self.frame, 3)
+        roll_ball(self.frame, 4)
+        for i in range(16):
+            roll_ball(self.frame, 0)
+        self.assertEqual(24, score(self.frame))
+
 if __name__ == '__main__':
     unittest.main()

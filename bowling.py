@@ -3,7 +3,11 @@
 
 # actually to pass gutter game, do bare minimum
 def roll_ball(frame, pins):
-    return frame.append(pins)
+    if pins != 10:
+        return frame.append(pins)
+    else:
+        frame.append(pins)
+        return frame.append(0)
 
 def score(frame):
     # score for spares, check pairs at
