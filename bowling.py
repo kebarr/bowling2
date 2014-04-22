@@ -5,4 +5,5 @@
 def roll_ball(frame, pins):
     return frame + pins
 
-
+def score(frame):
+    return frame
