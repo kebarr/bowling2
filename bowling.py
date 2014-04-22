@@ -6,4 +6,11 @@ def roll_ball(frame, pins):
     return frame.append(pins)
 
 def score(frame):
-    return sum(frame)
+    # score for spares, check pairs at
+    score = 0
+    for i in range(len(frame)):
+        score += frame[i]
+        if i%2 == 0:
+            if frame[i] + frame[i + 1] == 10:
+                score += frame[i + 2]
+    return score

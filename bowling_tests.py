@@ -9,12 +9,12 @@ class PythonBowlingGame(unittest.TestCase):
     def test_gutter_game(self):
         for i in range(20):
             roll_ball(self.frame, 0)
-        self.assertEqual(0, self.frame)
+        self.assertEqual(0, score(self.frame))
 
     def test_all_ones(self):
         for i in range(20):
             roll_ball(self.frame, 1)
-        self.assertEqual(20, self.frame)
+        self.assertEqual(20, score(self.frame))
 
     def test_one_spare(self):
         roll_ball(self.frame, 5)
