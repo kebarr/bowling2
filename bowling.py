@@ -16,5 +16,10 @@ def score(frame):
         score += frame[i]
         if i%2 == 0:
             if frame[i] + frame[i + 1] == 10:
-                score += frame[i + 2]
+                if frame[i + 1] != 0:
+                    score += frame[i + 2]
+                # else its a strike
+                else:
+                    score += frame[i + 2]
+                    score += frame[i + 3]
     return score
