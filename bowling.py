@@ -3,7 +3,7 @@
 
 # actually to pass gutter game, do bare minimum
 def roll_ball(frame, pins):
-    return frame + pins
+    return frame.append(pins)
 
 def score(frame):
-    return frame
+    return sum(frame)
