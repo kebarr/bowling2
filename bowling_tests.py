@@ -32,5 +32,10 @@ class PythonBowlingGame(unittest.TestCase):
             roll_ball(self.frame, 0)
         self.assertEqual(24, score(self.frame))
 
+    def test_perfect_game(self):
+        for i in range(12):
+            roll_ball(self.frame, 10)
+        self.assertEqual(300, score(self.frame))
+
 if __name__ == '__main__':
     unittest.main()
